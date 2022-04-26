@@ -92,6 +92,7 @@ class Test1(unittest.TestCase):
             assert(False)
         Test_page.go_to_store()
         Test_page.add_to_cart()
+        Test_page.go_to_cart()
         Test_page.rem_from_cart()
         print("add/remove from cart Test passed")
 #Payment via Wire method

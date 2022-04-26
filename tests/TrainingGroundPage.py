@@ -70,8 +70,7 @@ class test_TrainingGroundPage(unittest.TestCase):
         button.click()
         return None
     def rem_from_cart(self):
-        wait = WebDriverWait(self.driver, 10)
-        button = self.driver.find_element_by_id('icon-trash')
+        button = self.driver.find_element_by_class_name('icon-trash')
         button.click()
         return None
     def alerts(self):
