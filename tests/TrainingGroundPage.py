@@ -199,6 +199,4 @@ class test_TrainingGroundPage(unittest.TestCase):
         button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="SubmitCreate"]/span/i')))
         button.click()
         return None
-    def login(username, password):
-        username = "v.jakushkin@gmail.com"
-        password = "enot123"
+
