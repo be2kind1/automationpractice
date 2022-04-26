@@ -72,7 +72,7 @@ class Test1(unittest.TestCase):
         Test_page.add_to_cart()
         Test_page.go_to_store()
         Test_page.go_to_cart()
-        print("Test add to cart")
+        print("Test add to cart passed")
 #Remove from Cart
     def test3_RemoveFromCart(self):
         browser = webdriver.Chrome()
@@ -116,7 +116,7 @@ class Test1(unittest.TestCase):
         Test_page.check_out3()
         Test_page.check_out3_1()
         Test_page.check_out5()
-        print("Test 4 Wire payment method Test successfuly passed")
+        print("Wire payment method Test successfuly passed")
 
 #Payment via Card method
     def test5_CardPayment(self):
@@ -138,4 +138,4 @@ class Test1(unittest.TestCase):
         Test_page.check_out4()
 
 
-        print("credit card method Test successfuly passed")
+        print("Payment by check method test successfuly passed")
