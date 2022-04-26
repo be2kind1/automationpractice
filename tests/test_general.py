@@ -104,6 +104,13 @@ class Test1(unittest.TestCase):
         Test_page.add_into_email(username)
         Test_page.add_into_pass(password)
         Test_page.click_button_0()
+        assert browser.current_url == "http://automationpractice.com/index.php?controller=my-account"
+        welcome = browser.find_element_by_xpath('//*[@id="center_column"]/p').text
+        assert welcome == "Welcome to your account. Here you can manage all of your personal information and orders."
+        if welcome == "Welcome to your account. Here you can manage all of your personal information and orders.":
+            assert(True)
+        else:
+            assert(False)
         Test_page.go_to_store()
         Test_page.add_to_cart()
 
@@ -116,7 +123,7 @@ class Test1(unittest.TestCase):
         Test_page.check_out3()
         Test_page.check_out3_1()
         Test_page.check_out5()
-        print("Wire payment method Test successfuly passed")
+        print("Wire payment method Test successfully passed")
 
 #Payment via Card method
     def test5_CardPayment(self):
@@ -127,6 +134,13 @@ class Test1(unittest.TestCase):
         Test_page.add_into_email(username)
         Test_page.add_into_pass(password)
         Test_page.click_button_0()
+        assert browser.current_url == "http://automationpractice.com/index.php?controller=my-account"
+        welcome = browser.find_element_by_xpath('//*[@id="center_column"]/p').text
+        assert welcome == "Welcome to your account. Here you can manage all of your personal information and orders."
+        if welcome == "Welcome to your account. Here you can manage all of your personal information and orders.":
+            assert(True)
+        else:
+            assert(False)
         Test_page.go_to_store()
         Test_page.add_to_cart()
         Test_page.go_to_store()
@@ -138,4 +152,4 @@ class Test1(unittest.TestCase):
         Test_page.check_out4()
 
 
-        print("Payment by check method test successfuly passed")
+        print("Payment by check method test successfully passed")
