@@ -82,15 +82,8 @@ class Test1(unittest.TestCase):
         Test_page.add_into_email(username)
         Test_page.add_into_pass(password)
         Test_page.click_button_0()
-        assert browser.current_url == "http://automationpractice.com/index.php?controller=my-account"
-        welcome = browser.find_element_by_xpath('//*[@id="center_column"]/p').text
-        assert welcome == "Welcome to your account. Here you can manage all of your personal information and orders."
-        if welcome == "Welcome to your account. Here you can manage all of your personal information and orders.":
-            assert(True)
-
-        else:
-            assert(False)
         Test_page.go_to_store()
+        Test_page.add_to_cart()
         Test_page.add_to_cart()
         Test_page.go_to_cart()
         Test_page.rem_from_cart()
