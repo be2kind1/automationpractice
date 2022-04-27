@@ -136,7 +136,6 @@ class test_TrainingGroundPage(unittest.TestCase):
         wait = WebDriverWait(self.driver, 10)
         inpt = self.driver.find_element_by_xpath('//*[@id="days"]')
         inpt.send_keys(text)
-
         return None
     def add_into_month(self, text):
         wait = WebDriverWait(self.driver, 10)

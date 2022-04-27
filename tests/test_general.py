@@ -1,6 +1,6 @@
 import unittest
 from TrainingGroundPage import test_TrainingGroundPage
-username = "v.jakushweeewkin@gmail.com"
+username = "v.jakushw23ewkin@gmail.com"
 password = "enot123"
 
 from selenium import webdriver
@@ -11,10 +11,11 @@ class Test1(unittest.TestCase):
         Test_page = test_TrainingGroundPage(driver=browser)
         Test_page.go()
         Test_page.click_button_1()
-        browser.implicitly_wait(30)
+
         Test_page.add_into_email_create(username)
 
         Test_page.create_user()
+        browser.implicitly_wait(30)
         Test_page.add_into_firstname('Viktor')
         Test_page.add_into_pass(password)
         Test_page.add_into_lastname('jakuskin')
@@ -86,6 +87,7 @@ class Test1(unittest.TestCase):
         Test_page.add_to_cart()
         Test_page.add_to_cart()
         Test_page.go_to_cart()
+        browser.implicitly_wait(30)
         Test_page.rem_from_cart()
         print("add/remove from cart Test passed")
 #Payment via Wire method
